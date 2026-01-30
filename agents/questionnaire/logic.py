@@ -142,7 +142,8 @@ def run_questionnaire_agent(user_input: str):
 
     conversation_history.append(f"Agent: {next_question}")
 
-    # ⏳ Slow down to avoid burst quota
+    # Slow down to avoid burst quota
     time.sleep(1.5)
 
     return next_question
+
