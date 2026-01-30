@@ -43,7 +43,6 @@ The Questionnaire Agent ensures the Diagnosis Agent receives complete, structure
 - Make final triage decisions
 
 ## Folder Structure
-<img width="679" height="194" alt="image" src="https://github.com/user-attachments/assets/efce7f94-205f-45ff-8e79-9484d305bd59" />
 
 ```md
 agents/questionnaire/
@@ -91,8 +90,8 @@ This design improves maintainability, testing, and academic clarity.
 When the questionnaire is complete, the agent returns a structured JSON object conforming to QuestionnaireOutput.
 
 # Example Output (Simplified)
-<img width="943" height="549" alt="image" src="https://github.com/user-attachments/assets/53fe0880-e685-4d59-81d8-6d9467d06de4" />
 
+```json
 {
   "metadata": {
     "agent": "QuestionnaireAgent",
@@ -111,7 +110,7 @@ When the questionnaire is complete, the agent returns a structured JSON object c
   "questionnaire_summary": "Patient reports a gradually worsening sore throat over one day with moderate severity and no associated systemic symptoms.",
   "ready_for_diagnosis": true
 }
-
+```
 This output is directly consumable by the Diagnosis Agent.
 
 ## Integration with Diagnosis Agent
@@ -131,9 +130,9 @@ The Questionnaire Agent is designed to align with the following Diagnosis Agent 
 
 ### How to Run (Local)
 From the project root:
-
-**python main.py**
-
+```python
+python main.py**
+```
 The agent runs in an interactive CLI loop until questionnaire completion.
 
 ### Disclaimer
