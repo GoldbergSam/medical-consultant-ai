@@ -45,13 +45,14 @@ The Questionnaire Agent ensures the Diagnosis Agent receives complete, structure
 ## Folder Structure
 <img width="679" height="194" alt="image" src="https://github.com/user-attachments/assets/efce7f94-205f-45ff-8e79-9484d305bd59" />
 
+```md
 agents/questionnaire/
 ├── logic.py        # Core agent orchestration & state
 ├── prompt.py       # Centralized prompt templates
 ├── validator.py    # Completion & urgency logic
 ├── schema.py       # Pydantic output schema
 └── README.md       # This file
-
+```
 ## Key Design Principles
 1. Schema-Driven Completion (Not Fixed Question Count)
 The agent does not stop after a fixed number of questions.
