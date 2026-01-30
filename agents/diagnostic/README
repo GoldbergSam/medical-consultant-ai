@@ -1,0 +1,24 @@
+* Core specialists always active: GP, Internal Medicine, ER/Red-Flag (baseline debate for common/systemic/urgent).
+* Conditional specialists: Pharmacist and Biologist—summoned only when relevant (e.g., meds mentioned, biological clues)—via prompt logic (ADK's LLM decides based on input).
+* Researchers: 2 specialized (Studies + Guidelines/Local) for evidence validation during debate (kept simple; we can add more later).
+* Debater: Single agent to synthesize/refine.
+* Flow: Parallel proposals → conditional summons → debate with evidence → 1-2 iterations → finalized JSON output with disclaimers.
+
+
+agents/diagnostics/
+├── __init__.py                  # Exports main agent
+├── agent.py                     # Main DiagnosticAgent (coordinator)
+├── specialists/                 # Subfolder for specialists
+│   ├── __init__.py
+│   ├── gp.py                    # General Practitioner
+│   ├── internal.py              # Internal Medicine
+│   ├── er_redflag.py            # ER/Red-Flag
+│   ├── pharmacist.py            # Conditional
+│   └── biologist.py             # Conditional
+├── debater.py                   # Single debater
+└── researchers/                 # Researcher
+    ├── __init__.py
+    ├── studies_researcher.py    # Researcher for studies evidence
+
+
+This keeps it efficient (core only for most cases) and modular (easy to expand).
