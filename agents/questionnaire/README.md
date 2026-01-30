@@ -131,7 +131,7 @@ The Questionnaire Agent is designed to align with the following Diagnosis Agent 
 ### How to Run (Local)
 From the project root:
 ```python
-python main.py**
+python main.py
 ```
 The agent runs in an interactive CLI loop until questionnaire completion.
 
