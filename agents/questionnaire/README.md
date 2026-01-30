@@ -43,6 +43,8 @@ The Questionnaire Agent ensures the Diagnosis Agent receives complete, structure
 - Make final triage decisions
 
 ## Folder Structure
+<img width="679" height="194" alt="image" src="https://github.com/user-attachments/assets/efce7f94-205f-45ff-8e79-9484d305bd59" />
+
 agents/questionnaire/
 ├── logic.py        # Core agent orchestration & state
 ├── prompt.py       # Centralized prompt templates
@@ -88,6 +90,8 @@ This design improves maintainability, testing, and academic clarity.
 When the questionnaire is complete, the agent returns a structured JSON object conforming to QuestionnaireOutput.
 
 # Example Output (Simplified)
+<img width="943" height="549" alt="image" src="https://github.com/user-attachments/assets/53fe0880-e685-4d59-81d8-6d9467d06de4" />
+
 {
   "metadata": {
     "agent": "QuestionnaireAgent",
